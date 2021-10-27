@@ -1,6 +1,10 @@
 language: python
 python:
   - "3.8"
+
+branches:
+  only:
+    - main
 services:
   - postgresql
 install:
@@ -12,3 +16,9 @@ before_script:
   - psql -c "ALTER ROLE admin superuser;" -U postgres
 script:
   - python3 manage.py test
+
+deploy:
+  provider: heroku
+  app: fathomless-spire-77077
+  api_key:
+    secure: "eaeb3901-5995-4e2e-80bf-4201fbb52a08"
