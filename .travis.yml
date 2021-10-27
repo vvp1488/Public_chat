@@ -20,6 +20,5 @@ script:
 deploy:
   provider: heroku
   app: fathomless-spire-77077
-  api_key:
-    secure: "eaeb3901-5995-4e2e-80bf-4201fbb52a08"
+  api_key: $HEROKU_API_KEY
   skip_cleanup: true
