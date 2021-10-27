@@ -18,7 +18,7 @@ jobs:
       - run:
           name: Run tests
 
-          command: pytest
+          command: python -m pytest
 
 
 workflows:
