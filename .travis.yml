@@ -1,3 +1,4 @@
 language: python
 python:
   - "3.8"
+script: python3 manage.py test
